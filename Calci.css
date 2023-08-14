@@ -24,7 +24,7 @@ grid-column: span 4;
 height: 40px;
 border-radius: 30px;
 align-content: end;
-width: 210px;
+width: 170px;
 box-shadow: inset -4px -4px 10px #ffffff,inset 3px 3px 8px rgba(0,0, 0, .16);
 border: grey solid 2px;
 font-size: 25px;
@@ -33,6 +33,7 @@ margin: auto;
 margin-top: 10px;
 margin-bottom: 10px;
 padding-right: 20px;
+padding-left: 40px;
 }
 button{
 height: 30px;
