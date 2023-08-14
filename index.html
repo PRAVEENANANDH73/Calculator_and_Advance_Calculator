@@ -12,7 +12,11 @@
             <input type="text" placeholder="0" id="output">
             <button onclick="Clear()">Clr</button>
             <button onclick="Del()">Del</button>
+            <button onclick="factorial()">!</button>
             <button onclick="display('%')">%</button>
+            <button onclick="outputScreen.value=Math.sqrt(outputScreen.value,2)">√</button>
+            <button onclick="outputScreen.value=Math.pow(outputScreen.value,2)">x<sup>2</sup></button>
+            <button onclick="outputScreen.value=Math.PI.toFixed(4)">π</button>
             <button onclick="display('/')">/</button>
             <button onclick="display('7')">7</button>
             <button onclick="display('8')">8</button>
@@ -31,10 +35,9 @@
             <button class="equal" onclick="Calculate();">=</button>
               </div>
     </div>
-  <center> <a href="./Advcal.html"><button class="Advcal">Advance Calculation</button></a></center>
+   <center><a href="./Advcal.html"><button class="Advcal">Advance Calculation</button></a></center>
     <script>
-        let outputScreen=document.getElementById("output");
-
+        let outputScreen=document.getElementById("output")
         function display(num){
 outputScreen.value+=num;
         }
@@ -52,6 +55,18 @@ outputScreen.value+=num;
         function Del(){
             outputScreen.value=outputScreen.value.slice(0,-1);
         }
+function factorial(){
+    let x = parseInt(document.getElementById("output").value);
+    document.getElementById("output").value = fact(x);
+}
+function fact(n){
+    if(n!=0){
+        return n*fact(n-1);
+    }
+    else{
+        return 1;
+    }
+}
     </script>
 </body>
 </html>
